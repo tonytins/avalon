@@ -1,0 +1,67 @@
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a,
+.btn-link {
+    color: #006bb7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+h1:focus {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid #e50110;
+}
+
+.validation-message {
+    color: #e50110;
+}
+
+/* @media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+        color: #f6f6f6;
+        background-color: #2f2f2f;
+    }
+
+    a:hover {
+        color: #24c8db;
+    }
+
+    input,
+    button {
+        color: #ffffff;
+        background-color: #0f0f0f98;
+    }
+
+    button:active {
+        background-color: #0f0f0f69;
+    }
+
+} */
