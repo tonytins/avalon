@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div class="sidebar">
+    <div class="sidebar bg-blue-900 text-left">
       <SideBar />
     </div>
 
@@ -37,4 +37,27 @@ const currentView = computed(() => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+@media (min-width: 641px) {
+  .page {
+    flex-direction: row;
+  }
+}
+</style>
