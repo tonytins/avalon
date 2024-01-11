@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -42,7 +46,7 @@ h1:focus {
     color: #e50110;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 
     html,
     body {
@@ -64,4 +68,4 @@ h1:focus {
         background-color: #0f0f0f69;
     }
 
-} */
+}

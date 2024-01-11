@@ -1,37 +1,40 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import NavMenu from "./components/NavMenu.vue";
-</script>
-
 <template>
   <div class="page">
     <div class="sidebar">
-      <NavMenu />
+      <SideBar />
     </div>
 
     <main>
-      <div class="top-row px-4">
-
-      </div>
-
       <article class="content px-4">
         <div class="container">
-          <h1>Hello, world!</h1>
-
-          Welcome to your new app.
+          <component :is="currentView" />
         </div>
       </article>
     </main>
   </div>
 </template>
 
-<style scoped>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
+<script setup>
+import { ref, computed } from 'vue'
+import Home from './Home.vue'
+import About from './About.vue'
+import NotFound from './NotFound.vue'
+import SideBar from './SideBar.vue'
+
+const routes = {
+  '/': Home,
+  '/about': About
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #249b73);
-}
-</style>
+const currentPath = ref(window.location.hash)
+
+window.addEventListener('hashchange', () => {
+  currentPath.value = window.location.hash
+})
+
+const currentView = computed(() => {
+  return routes[currentPath.value.slice(1) || '/'] || NotFound
+})
+</script>
+
+<style scoped></style>

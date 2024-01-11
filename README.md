@@ -1,9 +1,5 @@
 # Avalon
 
-Avalon is a simple proof of concept to how easy it would be to bring .NET Blazor's components to Vue in order to test a theory that the two share a similar Model-View-Controller design compared to React or Solid. Spoilers: they do. Coming from a Blazor background, I accidentally jumped head first into React when transitioning a few Rust projects into desktop applications, and only realized my mistake afterward. Avalon was intended to correct that mistake. xD
-
-It doesn't include Tauri's default hello world example on the front end (thoguh the code is still there on the Rust side) because I wanted to see just how much of the home page's components I could port over, as I'm not that familiar with Vue yet.
-
 ## Requirements
 
 ### Supported Platforms
